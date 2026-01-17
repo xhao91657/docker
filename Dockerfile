@@ -99,9 +99,9 @@ echo "==========================================="\n\
 
 RUN chmod +x /start.sh
 
-# 暴露端口
-EXPOSE 22  # SSH端口
-EXPOSE 8888  # WebSSH端口
+# 暴露端口 - 移除行尾注释以避免解析错误
+EXPOSE 22
+EXPOSE 8888
 
 # 健康检查
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
